@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Usuários</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-shape"></div>
+    <main class="page">
+      <section class="card">
+        <div class="card__header">
+          <p class="badge">Novo por aqui?</p>
+          <h1>Crie seu acesso</h1>
+          <p class="subtitle">
+            Preencha os dados abaixo e comece a utilizar a plataforma hoje mesmo.
+          </p>
+        </div>
+
+        <form class="form" id="signup-form" novalidate>
+          <label class="input-group">
+            <span>Nome completo</span>
+            <input type="text" name="name" placeholder="Maria Silva" required />
+            <small class="error" data-error-for="name"></small>
+          </label>
+
+          <label class="input-group">
+            <span>E-mail</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="maria@email.com"
+              inputmode="email"
+              required
+            />
+            <small class="error" data-error-for="email"></small>
+          </label>
+
+          <label class="input-group">
+            <span>Telefone</span>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="(11) 91234-5678"
+              inputmode="tel"
+              required
+            />
+            <small class="error" data-error-for="phone"></small>
+          </label>
+
+          <div class="grid">
+            <label class="input-group">
+              <span>Senha</span>
+              <input type="password" name="password" minlength="6" required />
+              <small class="error" data-error-for="password"></small>
+            </label>
+
+            <label class="input-group">
+              <span>Confirmar senha</span>
+              <input type="password" name="confirm" minlength="6" required />
+              <small class="error" data-error-for="confirm"></small>
+            </label>
+          </div>
+
+          <label class="checkbox">
+            <input type="checkbox" name="terms" required />
+            <span>Aceito os termos de uso</span>
+          </label>
+
+          <button type="submit">Criar conta</button>
+        </form>
+      </section>
+
+      <section class="aside">
+        <h2>Por que se cadastrar?</h2>
+        <ul>
+          <li>Acompanhe seus projetos em tempo real.</li>
+          <li>Receba notificações e lembretes personalizados.</li>
+          <li>Compartilhe resultados com a sua equipe.</li>
+        </ul>
+
+        <div class="highlight">
+          <p>
+            "Nossa plataforma ajudou o time a organizar processos em poucos dias.
+            O cadastro foi rápido e simples!"
+          </p>
+          <span>— Equipe Horizonte</span>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
